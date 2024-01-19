@@ -202,6 +202,20 @@ class CrawlerSetup {
                     maxUsageCount: this.maxSessionUsageCount,
                 },
             },
+            
+            browserPoolOptions: {
+                useFingerprints: true,
+                fingerprintOptions: {
+                    fingerprintGeneratorOptions: {
+                       // browsers: this.browserType,
+                        //browserType,
+                        //devices: this.deviceType,
+                        //deviceType,
+                        browsers:['chrome', 'firefox', 'edge', 'safari'],
+                        devices: ['desktop','mobile'],
+                    },
+                },
+            },
         };
 
         this._createNavigationHooks(options);
